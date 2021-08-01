@@ -1,4 +1,5 @@
 import React, {useState, createContext} from "react";
+import Header from "./Header";
 import Home from "./Home";
 
 export const Banco = createContext();
@@ -14,6 +15,7 @@ export default function Contexto(){
 
   return(
     <Banco.Provider value={{cliente, setCliente}}>
+      <Header />
       <Home />
     </Banco.Provider>
   );
